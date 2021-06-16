@@ -1,1 +1,79 @@
-<p>registro works!</p>
+<mat-card>
+    <mat-card-content>
+        <mat-card-header>
+            <mat-card-title>
+                <mat-icon >assignment</mat-icon>Registrar Usuario
+            </mat-card-title>
+        </mat-card-header>
+        <form [formGroup]="form">
+            <mat-grid-list cols="4" rowHeight="3:1">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="nombre">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="apellidos">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="" type="email" formControlName="email">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="" type="password" formControlName="password">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>País</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="pais">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Ciudad</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="ciudad">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nacimiento</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="nacimiento">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>LinkedIn</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="linkedin">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Hobbies</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="hobbies">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Conocimientos Extras</mat-label>
+                        <input matInput placeholder="" type="text" formControlName="conocimientos">
+                    </mat-form-field>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card-content>
+    <mat-card-actions class="btn-dos">
+        <button mat-raised-button color="warn" routerLink="/login">Cancelar</button>
+        <button mat-raised-button color="primary" class="savedate" (click)="save()">
+            <mat-icon>save</mat-icon>&nbsp;Registrarse
+        </button>
+    </mat-card-actions>
+</mat-card>

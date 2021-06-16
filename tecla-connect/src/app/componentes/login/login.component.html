@@ -1,1 +1,55 @@
-<p>login works!</p>
+<div class="contendor">
+    <mat-grid-list cols="2" rowHeight="1:2">
+        <mat-grid-tile>
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Login</mat-card-title>
+                    <mat-card-subtitle>Ingresa a tu cuenta</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="example-container">
+                        <form action="">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Usuario</mat-label>
+                                <input matInput placeholder="">
+                                <mat-icon matSuffix>account_circle</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </form>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-stroked-button color="accent">Ingresar</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Registrarse</mat-card-title>
+                    <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                        Tecla Connect ha sido desarrollada para hacer un red social entre Teclers, así que registrate y
+                        sé parte de
+                        este maravilloso encuentro de la comunidad Tecla.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button routerLink="/registrarse" mat-stroked-button color="accent">Registrarse</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</div>
