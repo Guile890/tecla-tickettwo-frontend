@@ -8,18 +8,21 @@ import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon'; 
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table'; 
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { EstudiosComponent } from './componentes/registro/estudios/estudios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroComponent,
+    EstudiosComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
     MatIconModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
     
     
   ],

@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2'
+
+
+
+
 
 @Component({
   selector: 'app-registro',
@@ -7,6 +12,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+  
+  selectedFile: File
   public form: FormGroup;
 
   constructor() { }
@@ -23,14 +30,30 @@ export class RegistroComponent implements OnInit {
       linkedin:  new FormControl('', [Validators.required]),
       hobbies:  new FormControl('', [Validators.required]),
       conocimientos:  new FormControl('', [Validators.required]),
+      imagen: new FormControl('', [Validators.required]),
 
     })
   }
   save(){
-
+    console.log(this.form.value)
+    if(this.form.status === 'INVALID'){
+      Swal.fire({
+        icon: 'error',
+        title: 'Formulario inválido',
+        text: 'verifica la información',
+      })
+    }
+    
   }
-  cancelar(){
-
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0]
+    console.log('selected',this.selectedFile)
+    const uploadData = new FormData();
+    uploadData.append('imagen', this.selectedFile, this.selectedFile.name);
+    this.form.value.imagen = uploadData;
   }
+
+  
+  
 
 }
