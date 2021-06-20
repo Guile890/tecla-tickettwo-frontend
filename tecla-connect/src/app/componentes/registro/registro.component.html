@@ -73,7 +73,7 @@
                 <mat-grid-tile>
                     <input style="display: none" formControlName="imagen" type="file" (change)="onFileChanged($event)"
                         #fileInput accept="image/png, .jpeg, .jpg, image/gif">
-                    <button mat-raised-button color="accent" (click)="fileInput.click()">Subir foto de perfil</button>
+                    <button mat-raised-button color="accent" (click)="fileInput.click()" disabled>Subir foto de perfil</button>
                 </mat-grid-tile>
             </mat-grid-list>
         </form>

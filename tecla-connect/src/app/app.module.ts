@@ -9,6 +9,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table'; 
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +40,7 @@ import { EstudiosComponent } from './componentes/registro/estudios/estudios.comp
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
+    HttpClientModule
     
     
   ],

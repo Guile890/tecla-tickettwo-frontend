@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "tecla-connect"
+  "defaultProject": "tecla-connect",
+  "cli": {
+    "analytics": false
+  }
 }
