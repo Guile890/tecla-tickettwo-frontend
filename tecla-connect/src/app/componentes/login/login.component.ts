@@ -40,9 +40,9 @@ export class LoginComponent implements OnInit {
       if (resultado) {
         console.log('entrando en if')
         Swal.fire({
-          icon: 'error',
+          icon: 'success',
           title: 'Proceso exitoso',
-          text: 'Usuario registrado exitosamente',
+          text: 'Bienvenid@',
         })
         // setTimeout(() => {
         //   location.href = '/login'
