@@ -37,14 +37,28 @@ export class LoginComponent implements OnInit {
       }
       let resultado = await this.servicemainService.login(data);
       console.log('resultado', resultado)
-      sessionStorage.setItem(
-        'token',
-        JSON.stringify(resultado.token)
-      );
-      sessionStorage.setItem(
-        'userinfo',
-        JSON.stringify(resultado.userInfo)
-      );
+      if (resultado) {
+        console.log('entrando en if')
+        Swal.fire({
+          icon: 'error',
+          title: 'Proceso exitoso',
+          text: 'Usuario registrado exitosamente',
+        })
+        // setTimeout(() => {
+        //   location.href = '/login'
+        // }, 1300);
+        sessionStorage.setItem(
+          'token',
+          JSON.stringify(resultado.token)
+        );
+        sessionStorage.setItem(
+          'userinfo',
+          JSON.stringify(resultado.userInfo)
+        );
+
+      }
+
+
     }
 
   }

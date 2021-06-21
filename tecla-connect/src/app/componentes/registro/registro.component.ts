@@ -58,8 +58,19 @@ export class RegistroComponent implements OnInit {
         hobbies: this.form.value.hobbies,
         conocimientos: this.form.value.conocimientos,
       }
-      let resultado = await this.servicemainService.main(data)
+      let resultado = await this.servicemainService.registrarse(data)
       console.log('resultado',resultado)
+      if (resultado) {
+        console.log('entrando en if')
+        Swal.fire({
+          icon: 'success',
+          title: 'Proceso exitoso',
+          text: 'Usuario registrado exitosamente',
+        })
+        setTimeout(() => {
+          location.href = '/estudios'
+        }, 1500);
+      }
     }
 
   }

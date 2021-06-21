@@ -13,10 +13,10 @@ export class ServicemainService {
     this.servidor = environment.backendUrl;
   }
 
-  public main(data): any {
-    return this.mainService(data).toPromise();
+  public registrarse(data): any {
+    return this.registrarseService(data).toPromise();
   }
-  public mainService(data): Observable<any> {
+  public registrarseService(data): Observable<any> {
     const body = { data }
     const url = this.servidor + 'usuario';
     return this.httpClient.post<[]>(url, body);
