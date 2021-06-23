@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table'; 
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -19,6 +20,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { EstudiosComponent } from './componentes/registro/estudios/estudios.component';
+import { ModalEstudiosComponent } from './componentes/registro/estudios/modal-estudios/modal-estudios.component';
+import { ModalIdiomaComponent } from './componentes/registro/estudios/modal-idioma/modal-idioma.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { EstudiosComponent } from './componentes/registro/estudios/estudios.comp
     LoginComponent,
     RegistroComponent,
     EstudiosComponent,
+    ModalEstudiosComponent,
+    ModalIdiomaComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,8 @@ import { EstudiosComponent } from './componentes/registro/estudios/estudios.comp
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
     
     
   ],
